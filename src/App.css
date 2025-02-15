@@ -95,27 +95,16 @@
   border-radius: 15px 15px 0 0;
   height: 220px;
   position: relative;
-}
-
-.service-card-image::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.service-card:hover .card-image {
-  transform: scale(1.1);
+  object-position: center;
 }
 
 .service-card h2 {
@@ -1184,7 +1173,7 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar {
     justify-content: flex-end;
   }
@@ -1874,4 +1863,83 @@
 .quality-item h3,
 .quality-item p {
   color: #000000 !important;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  text-align: center;
+}
+
+.slide-content h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content p {
+  margin: 0;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slide-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: white;
 }
