@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 import SeniorCare from './pages/SeniorCare';
 import ChildCare from './pages/ChildCare';
 import SpecialNeeds from './pages/SpecialNeeds';
 import About from './pages/About';
+import Contact from './components/Contact';
 import ScheduleAppointment from './components/ScheduleAppointment';
 
 function HomePage() {
@@ -93,7 +94,7 @@ function HomePage() {
           </div>
           <h2>Child Care</h2>
           <p>We understand every child is unique and deserves personalized care. Our caregivers provide a safe, nurturing environment where children can play and learn, tailored to your child's needs, ensuring comfort and happiness, all within the familiarity of your home.</p>
-          <Link to="/child-care" className="explore-button">Learn More</Link>
+          <NavLink to="/child-care" className="explore-button">Learn More</NavLink>
         </div>
 
         <div className="service-card">
@@ -106,7 +107,7 @@ function HomePage() {
           </div>
           <h2>Special Needs Care</h2>
           <p>We understand the unique needs of individuals with special needs and provide compassionate care to support them. Our trained caregivers offer personalized attention, ensuring their comfort and well-being.</p>
-          <Link to="/special-needs" className="explore-button">Learn More</Link>
+          <NavLink to="/special-needs" className="explore-button">Learn More</NavLink>
         </div>
       </div>
     </div>
@@ -141,12 +142,12 @@ function App() {
             <span></span>
           </div>
           <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>HOME</Link>
-            <Link to="/senior-care" onClick={() => setIsMenuOpen(false)}>SENIOR CARE</Link>
-            <Link to="/child-care" onClick={() => setIsMenuOpen(false)}>CHILD CARE</Link>
-            <Link to="/special-needs" onClick={() => setIsMenuOpen(false)}>SPECIAL NEEDS</Link>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>ABOUT US</Link>
-            <Link to="#contact" onClick={() => setIsMenuOpen(false)}>CONTACT</Link>
+            <NavLink to="/" onClick={() => setIsMenuOpen(false)}>HOME</NavLink>
+            <NavLink to="/senior-care" onClick={() => setIsMenuOpen(false)}>SENIOR CARE</NavLink>
+            <NavLink to="/child-care" onClick={() => setIsMenuOpen(false)}>CHILD CARE</NavLink>
+            <NavLink to="/special-needs" onClick={() => setIsMenuOpen(false)}>SPECIAL NEEDS</NavLink>
+            <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>ABOUT US</NavLink>
+            <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT</NavLink>
           </div>
         </nav>
 
@@ -156,6 +157,7 @@ function App() {
           <Route path="/child-care" element={<ChildCare />} />
           <Route path="/special-needs" element={<SpecialNeeds />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <div className="consultation-banner">
