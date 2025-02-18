@@ -302,18 +302,29 @@
 
 /* Senior Care Page Specific Styles */
 .page-header {
-  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=2000');
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 60px 20px;
   text-align: center;
   margin-bottom: 40px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .page-header h1 {
   font-size: 3rem;
   margin-bottom: 15px;
   font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  z-index: 1;
 }
 
 .header-subtitle {
@@ -321,8 +332,15 @@
   opacity: 0.9;
   max-width: 600px;
   margin: 0 auto;
-  color: #000000 !important;
+  color: white !important;
   font-weight: bold !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.page-header .header-subtitle {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .info-section {
@@ -1451,6 +1469,7 @@
   margin-bottom: 1rem;
   font-weight: 800;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  color: white;
 }
 
 .content-container {
@@ -1663,6 +1682,7 @@
   font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
   margin-top: 1rem;
+  color: white !important;
 }
 
 .intro-text {

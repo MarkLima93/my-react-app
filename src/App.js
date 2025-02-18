@@ -35,7 +35,7 @@ function HomePage() {
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="hero-section">
