@@ -249,9 +249,10 @@
 }
 
 .senior-care-page {
-  padding: 120px 20px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding-top: 80px;
+  width: 100%;
+  margin: 0;
+  max-width: none;
 }
 
 .senior-care-page h1 {
@@ -1456,20 +1457,33 @@
   justify-content: center;
   text-align: center;
   color: white;
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .header-content {
-  max-width: 800px;
+  max-width: 1200px;
   padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 .header-content h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   font-weight: 800;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   color: white;
+  width: 100%;
+}
+
+.header-content .header-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  margin-top: 1rem;
+  color: white !important;
+  width: 100%;
 }
 
 .content-container {
@@ -2070,4 +2084,56 @@
   .contact-section {
     padding: 2rem 1rem;
   }
+}
+
+/* Child Care Background */
+.senior-care-page .page-header-pro:has(h1:contains("Child Care")) {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1602640010336-7c873d2037e8?auto=format&fit=crop&w=2000');
+}
+
+/* Special Needs Background */
+.senior-care-page .page-header-pro:has(h1:contains("Special Needs")) {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=2000');
+}
+
+/* Page Headers with Background Images */
+.page-header-pro {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=2000');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+
+/* Child Care Background */
+.child-care-header {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1485460535564-844461f37f77?auto=format&fit=crop&w=2000') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/* Special Needs Background */
+.special-needs-header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=2000') !important;
+  background-size: cover !important;
+  background-position: center !important;
 }

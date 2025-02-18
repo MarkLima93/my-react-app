@@ -1,0 +1,108 @@
+.senior-care-page,
+.child-care-page {
+  position: relative;
+}
+
+.page-header-pro {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  padding: 6rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://abetterwayinhomecare.com/wp-content/uploads/2024/11/1fe62bf24d3590aaa6e8fd7c6f9843d9.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header-pro.child-care-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://cdn10.bostonmagazine.com/wp-content/uploads/sites/2/2021/08/daycare.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.page-header-pro.special-needs-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://www.borgenmagazine.com/wp-content/uploads/2014/08/special-needs-children-in-developing-countries_opt.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.page-header-pro .header-content {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.page-header-pro h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 
+               -1px -1px 4px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+}
+
+.page-header-pro .header-subtitle {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 
+               -1px -1px 4px rgba(0, 0, 0, 0.6);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+  margin-top: -40px; /* Reduced negative margin */
+}
+
+.intro-section {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.intro-card {
+  background: rgba(255, 255, 255, 1);  /* Fully opaque background */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);  /* Enhanced shadow */
+  padding: 2.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  color: #333;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.experience-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.badge {
+  text-align: center;
+}
+
+.badge-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+.badge-text {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+} 

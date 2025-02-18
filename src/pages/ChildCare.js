@@ -1,142 +1,142 @@
 import React from 'react';
+import './SeniorCare.css';  // Using the same CSS file since we've made it work for both pages
 
 function ChildCare() {
   return (
     <div className="senior-care-page">
-      <div className="page-header">
-        <h1>Child Care Services</h1>
-        <p className="header-subtitle">Creating Joyful Learning Experiences for Every Child</p>
+      <div className="page-header-pro child-care-header">
+        <div className="header-content">
+          <h1>Child Care Services</h1>
+          <p className="header-subtitle">Creating Joyful Learning Experiences for Every Child</p>
+        </div>
       </div>
-      
-      <div className="content-wrapper">
-        <div className="service-details">
-          <div className="welcome-banner">
-            <div className="info-card">
-              <h2>Growing Minds, Happy Hearts</h2>
-              <p className="lead-text">
-                At Balance Center, we believe every child deserves a nurturing environment where they can 
-                learn, play, and grow. Our child care programs combine educational activities with fun, 
-                creating an engaging experience that supports your child's development.
-              </p>
-            </div>
-          </div>
 
-          <div className="age-groups-section">
-            <h2>Programs by Age Group</h2>
-            <div className="age-groups-grid">
-              <div className="age-group-item">
-                <div className="age-icon">👶</div>
-                <h3>Infants (0-12 months)</h3>
-                <ul>
-                  <li>Nurturing, safe environment</li>
-                  <li>Individual care routines</li>
-                  <li>Sensory activities</li>
-                  <li>Early development support</li>
-                </ul>
+      <div className="content-container">
+        <div className="intro-section">
+          <div className="intro-card">
+            <h2>Welcome to Premium Child Care Services</h2>
+            <p className="intro-text">
+              At Balance Center, we believe every child deserves a nurturing environment where they can 
+              learn, play, and grow. Our child care programs combine educational activities with fun, 
+              creating an engaging experience that supports your child's development.
+            </p>
+            <div className="experience-badges">
+              <div className="badge">
+                <span className="badge-number">13+</span>
+                <span className="badge-text">Years Experience</span>
               </div>
-              <div className="age-group-item">
-                <div className="age-icon">🚼</div>
-                <h3>Toddlers (1-3 years)</h3>
-                <ul>
-                  <li>Interactive play</li>
-                  <li>Basic skill development</li>
-                  <li>Social interaction</li>
-                  <li>Creative activities</li>
-                </ul>
+              <div className="badge">
+                <span className="badge-number">1000+</span>
+                <span className="badge-text">Families Served</span>
               </div>
-              <div className="age-group-item">
-                <div className="age-icon">🎨</div>
-                <h3>Preschool (3-5 years)</h3>
-                <ul>
-                  <li>Educational programs</li>
-                  <li>Structured activities</li>
-                  <li>School readiness</li>
-                  <li>Social development</li>
-                </ul>
-              </div>
-              <div className="age-group-item">
-                <div className="age-icon">📚</div>
-                <h3>School Age (5+ years)</h3>
-                <ul>
-                  <li>Homework assistance</li>
-                  <li>Enrichment activities</li>
-                  <li>Supervised recreation</li>
-                  <li>Life skills development</li>
-                </ul>
+              <div className="badge">
+                <span className="badge-number">24/7</span>
+                <span className="badge-text">Care Available</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="daily-activities">
-            <div className="info-card">
-              <h2>A Day at Balance Center</h2>
-              <div className="timeline-grid">
-                <div className="timeline-item">
-                  <span className="time">Morning</span>
-                  <h3>Learning & Discovery</h3>
-                  <p>Educational activities, reading time, and creative projects</p>
-                </div>
-                <div className="timeline-item">
-                  <span className="time">Midday</span>
-                  <h3>Active Play & Lunch</h3>
-                  <p>Physical activities, nutritious meals, and social interaction</p>
-                </div>
-                <div className="timeline-item">
-                  <span className="time">Afternoon</span>
-                  <h3>Rest & Quiet Time</h3>
-                  <p>Nap time for younger children, quiet activities for older ones</p>
-                </div>
-                <div className="timeline-item">
-                  <span className="time">Late Day</span>
-                  <h3>Creative Expression</h3>
-                  <p>Art, music, and supervised free play activities</p>
-                </div>
+        <div className="services-section">
+          <h2 className="section-title">Our Premium Care Programs</h2>
+          <div className="premium-services-grid">
+            <div className="premium-service-card">
+              <div className="service-icon">👶</div>
+              <h3>Early Learning</h3>
+              <ul className="service-list">
+                <li>Age-appropriate activities</li>
+                <li>Educational games</li>
+                <li>Social development</li>
+                <li>Creative expression</li>
+              </ul>
+            </div>
+            <div className="premium-service-card">
+              <div className="service-icon">🎨</div>
+              <h3>Creative Activities</h3>
+              <ul className="service-list">
+                <li>Arts and crafts</li>
+                <li>Music and movement</li>
+                <li>Imaginative play</li>
+                <li>Storytelling sessions</li>
+              </ul>
+            </div>
+            <div className="premium-service-card">
+              <div className="service-icon">🌟</div>
+              <h3>Development Support</h3>
+              <ul className="service-list">
+                <li>Motor skills development</li>
+                <li>Language enrichment</li>
+                <li>Social interaction</li>
+                <li>Emotional growth</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="care-process">
+          <h2 className="section-title">Our Care Approach</h2>
+          <div className="process-timeline">
+            <div className="process-step">
+              <div className="step-number">01</div>
+              <h3>Initial Meeting</h3>
+              <p>Understanding your child's needs and interests</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">02</div>
+              <h3>Care Planning</h3>
+              <p>Creating a tailored development program</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">03</div>
+              <h3>Caregiver Selection</h3>
+              <p>Matching with experienced child care professionals</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">04</div>
+              <h3>Regular Updates</h3>
+              <p>Continuous communication and progress reports</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="quality-assurance">
+          <div className="quality-content">
+            <h2 className="section-title">Our Quality Standards</h2>
+            <div className="quality-grid">
+              <div className="quality-item">
+                <div className="quality-icon">✓</div>
+                <h3>Certified Caregivers</h3>
+                <p>Experienced and background-checked professionals</p>
+              </div>
+              <div className="quality-item">
+                <div className="quality-icon">✓</div>
+                <h3>Safe Environment</h3>
+                <p>Secure and nurturing care settings</p>
+              </div>
+              <div className="quality-item">
+                <div className="quality-icon">✓</div>
+                <h3>Educational Focus</h3>
+                <p>Development-oriented activities and learning</p>
+              </div>
+              <div className="quality-item">
+                <div className="quality-icon">✓</div>
+                <h3>Parent Partnership</h3>
+                <p>Regular updates and open communication</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="parent-resources">
-            <h2>Parent Resources</h2>
-            <div className="resources-grid">
-              <div className="resource-card">
-                <div className="resource-icon">📱</div>
-                <h3>Daily Updates</h3>
-                <p>Regular progress reports and activity updates through our parent app</p>
-              </div>
-              <div className="resource-card">
-                <div className="resource-icon">📅</div>
-                <h3>Flexible Scheduling</h3>
-                <p>Full-time, part-time, and drop-in care options available</p>
-              </div>
-              <div className="resource-card">
-                <div className="resource-icon">🍎</div>
-                <h3>Nutrition Guide</h3>
-                <p>Healthy meal and snack planning for growing children</p>
-              </div>
-              <div className="resource-card">
-                <div className="resource-icon">📝</div>
-                <h3>Development Tracking</h3>
-                <p>Regular assessments and milestone tracking</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="enrollment-section">
-            <div className="info-card">
-              <h2>Start Your Child's Journey</h2>
-              <div className="enrollment-grid">
-                <div className="enrollment-info">
-                  <h3>Enroll Today</h3>
-                  <p>Give your child the gift of quality care and education. Schedule a tour to learn more about our programs.</p>
-                  <button className="cta-button">Schedule a Tour</button>
-                </div>
-                <div className="enrollment-features">
-                  <div className="feature">✓ Safe, Nurturing Environment</div>
-                  <div className="feature">✓ Qualified, Caring Staff</div>
-                  <div className="feature">✓ Age-Appropriate Programs</div>
-                  <div className="feature">✓ Enriching Activities</div>
-                </div>
-              </div>
+        <div className="contact-section-pro">
+          <div className="contact-content">
+            <h2>Start Your Child's Journey Today</h2>
+            <p>Schedule a consultation to learn more about our child care programs</p>
+            <button className="contact-button-pro">Schedule Consultation</button>
+            <div className="contact-features">
+              <span>✓ Free Initial Assessment</span>
+              <span>✓ Flexible Care Options</span>
+              <span>✓ Age-Appropriate Programs</span>
+              <span>✓ Qualified Caregivers</span>
             </div>
           </div>
         </div>
