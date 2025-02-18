@@ -11,6 +11,12 @@ function ScheduleAppointment({ isOpen, onClose }) {
     message: ''
   });
 
+  const handlePhoneChange = (e) => {
+    // Remove any non-digit characters from the input
+    const phoneNumber = e.target.value.replace(/\D/g, '');
+    setFormData({...formData, phone: phoneNumber});
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you would typically handle the form submission
@@ -57,7 +63,10 @@ function ScheduleAppointment({ isOpen, onClose }) {
                 type="tel"
                 id="phone"
                 value={formData.phone}
-                onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                onChange={handlePhoneChange}
+                pattern="[0-9]*"
+                inputMode="numeric"
+                placeholder="Enter numbers only"
                 required
               />
             </div>
