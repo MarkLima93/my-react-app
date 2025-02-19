@@ -58,7 +58,7 @@
   padding-top: 80px;
   min-height: 100vh;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(230, 243, 255, 0.95) 100%),
-              url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-63452.jpg');
+              url('./assets/BalanceCenterLogo.avif');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -177,33 +177,32 @@
 
 .consultation-banner {
   background: linear-gradient(90deg, #4a90e2 0%, #357abd 100%);
-  padding: 3rem;
+  padding: 2rem;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
 }
 
-.consultation-content {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  max-width: 1200px;
-  width: 100%;
-  justify-content: center;
+.consultation-logo {
+  height: 80px;
+  width: auto;
 }
 
-.consultation-content h2 {
+.consultation-text {
   font-size: 2.5rem;
-  margin: 0;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+  flex: 1;
+  white-space: nowrap;
 }
 
-.get-started-button {
+.consultation-button {
   background: white;
   color: #4a90e2;
   border: none;
@@ -216,35 +215,35 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  white-space: nowrap;
 }
 
-.get-started-button:hover {
+.consultation-button:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 8px rgba(0,0,0,0.2);
   background: #f8f9fa;
 }
 
 @media (max-width: 768px) {
-  .service-cards {
+  .consultation-banner {
     flex-direction: column;
-    padding: 2rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
-  
-  .service-card {
-    margin-bottom: 2rem;
+
+  .consultation-logo {
+    height: 60px;
   }
-  
-  .service-card-image {
-    height: 180px;
-  }
-  
-  .nav-links {
-    display: none;
-  }
-  
-  .consultation-content {
-    flex-direction: column;
+
+  .consultation-text {
+    font-size: 1.8rem;
+    white-space: normal;
     text-align: center;
+  }
+
+  .consultation-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -2063,7 +2062,7 @@
   text-align: center;
 }
 
-.contact-alternative li::before,
+/* .contact-alternative li::before,
 .service-list li::before,
 .program-content ul li::before,
 .expertise-card ul li::before,
@@ -2076,7 +2075,7 @@
   font-size: 1.2rem;
   line-height: 1.5;
   color: #4285f4;
-}
+} */
 
 .contact-info span,
 .contact-alternative li span,
@@ -2102,14 +2101,7 @@
     top: 0.25rem;
   }
 
-  .contact-alternative li::before,
-  .service-list li::before,
-  .program-content ul li::before,
-  .expertise-card ul li::before,
-  .age-group-item ul li::before,
-  .senior-care-page ul li::before {
-    top: 0;
-  }
+
 }
 
 /* Child Care Background */

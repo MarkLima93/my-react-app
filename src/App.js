@@ -129,7 +129,7 @@ function App() {
           <div className="logo">
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <img 
-                src="https://static.wixstatic.com/media/4ca325_aebf1ad82d38463ba80def4e127d8322~mv2.png/v1/fill/w_194,h_168,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Balance%20Center%20Home%20Care%20Logo%20Small.png"
+                src="https://static.wixstatic.com/media/4ca325_a397b887d2354dff9eb0157c74f760ad~mv2.png/v1/crop/x_0,y_3,w_472,h_423/fill/w_196,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Balance%20Center%20Home%20Care%20Logo%20TM%20Clear.png"
                 alt="Balance Center Logo"
                 style={{ height: '40px', width: 'auto' }}
               />
@@ -161,15 +161,18 @@ function App() {
         </Routes>
 
         <div className="consultation-banner">
-          <div className="consultation-content">
-            <h2>Start Your Care Journey Today</h2>
-            <button 
-              className="get-started-button"
-              onClick={() => setIsScheduleModalOpen(true)}
-            >
-              Schedule Now
-            </button>
-          </div>
+          <img 
+            src="https://static.wixstatic.com/media/4ca325_a397b887d2354dff9eb0157c74f760ad~mv2.png/v1/crop/x_0,y_3,w_472,h_423/fill/w_196,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Balance%20Center%20Home%20Care%20Logo%20TM%20Clear.png"
+            alt="Balance Center Logo"
+            className="consultation-logo"
+          />
+          <span className="consultation-text">START YOUR CARE JOURNEY TODAY</span>
+          <button 
+            className="consultation-button"
+            onClick={() => setIsScheduleModalOpen(true)}
+          >
+            SCHEDULE NOW
+          </button>
         </div>
 
         <ScheduleAppointment 

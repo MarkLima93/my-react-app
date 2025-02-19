@@ -131,7 +131,6 @@ function ChildCare() {
           <div className="contact-content">
             <h2>Start Your Child's Journey Today</h2>
             <p>Schedule a consultation to learn more about our child care programs</p>
-            <button className="contact-button-pro">Schedule Consultation</button>
             <div className="contact-features">
               <span>✓ Free Initial Assessment</span>
               <span>✓ Flexible Care Options</span>

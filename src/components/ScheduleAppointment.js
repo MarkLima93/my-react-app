@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 
 function ScheduleAppointment({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -11,17 +12,105 @@ function ScheduleAppointment({ isOpen, onClose }) {
     message: ''
   });
 
-  const handlePhoneChange = (e) => {
-    // Remove any non-digit characters from the input
-    const phoneNumber = e.target.value.replace(/\D/g, '');
-    setFormData({...formData, phone: phoneNumber});
+  const [phoneError, setPhoneError] = useState('');
+  const [submitStatus, setSubmitStatus] = useState({ message: '', isError: false });
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
+  }, []);
+
+  const formatPhoneNumber = (value) => {
+    // Remove all non-digits
+    const phoneNumber = value.replace(/\D/g, '');
+    
+    // Format the number as XXX-XXX-XXXX
+    if (phoneNumber.length <= 3) {
+      return phoneNumber;
+    } else if (phoneNumber.length <= 6) {
+      return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3)}`;
+    } else {
+      return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
+    }
   };
 
-  const handleSubmit = (e) => {
+  const validatePhoneNumber = (phoneNumber) => {
+    // Remove all non-digits for validation
+    const cleaned = phoneNumber.replace(/\D/g, '');
+    
+    // Check if it's a valid 10-digit number
+    if (cleaned.length !== 10) {
+      return 'Please enter a valid 10-digit phone number';
+    }
+    
+    // Check if the area code is valid (no 0 or 1 as first digit)
+    if (cleaned[0] === '0' || cleaned[0] === '1') {
+      return 'Please enter a valid area code';
+    }
+    
+    return '';
+  };
+
+  const handlePhoneChange = (e) => {
+    const input = e.target.value;
+    const formatted = formatPhoneNumber(input);
+    
+    // Only update if we haven't reached max length
+    if (input.replace(/\D/g, '').length <= 10) {
+      setFormData({...formData, phone: formatted});
+    }
+    
+    // Validate and set error
+    setPhoneError(validatePhoneNumber(formatted));
+  };
+
+  const sendEmail = async (templateParams) => {
+    try {
+      const response = await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        {
+          to_email: 'BalanceCenterCare@gmail.com',
+          from_name: templateParams.name,
+          from_email: templateParams.email,
+          phone_number: templateParams.phone,
+          service_type: templateParams.serviceType,
+          preferred_date: templateParams.preferredDate,
+          preferred_time: templateParams.preferredTime,
+          message: templateParams.message
+        }
+      );
+
+      if (response.status === 200) {
+        setSubmitStatus({
+          message: 'Consultation scheduled successfully! We will contact you soon.',
+          isError: false
+        });
+        setTimeout(() => {
+          onClose();
+          setSubmitStatus({ message: '', isError: false });
+        }, 3000);
+      }
+    } catch (error) {
+      setSubmitStatus({
+        message: 'Failed to schedule consultation. Please try again.',
+        isError: true
+      });
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically handle the form submission
-    console.log('Form submitted:', formData);
-    onClose();
+    
+    // Check if there are any validation errors
+    const phoneValidation = validatePhoneNumber(formData.phone);
+    if (phoneValidation) {
+      setPhoneError(phoneValidation);
+      return;
+    }
+    
+    // Send email
+    await sendEmail(formData);
   };
 
   if (!isOpen) return null;
@@ -64,11 +153,10 @@ function ScheduleAppointment({ isOpen, onClose }) {
                 id="phone"
                 value={formData.phone}
                 onChange={handlePhoneChange}
-                pattern="[0-9]*"
-                inputMode="numeric"
-                placeholder="Enter numbers only"
+                placeholder="XXX-XXX-XXXX"
                 required
               />
+              {phoneError && <span className="error-message" style={{ color: 'red', fontSize: '0.8rem' }}>{phoneError}</span>}
             </div>
 
             <div className="form-group">
@@ -122,6 +210,17 @@ function ScheduleAppointment({ isOpen, onClose }) {
               rows="4"
             ></textarea>
           </div>
+
+          {submitStatus.message && (
+            <div className={`submit-status ${submitStatus.isError ? 'error' : 'success'}`} 
+                 style={{ 
+                   color: submitStatus.isError ? 'red' : 'green',
+                   textAlign: 'center',
+                   marginTop: '1rem'
+                 }}>
+              {submitStatus.message}
+            </div>
+          )}
 
           <div className="form-footer">
             <button type="submit" className="submit-button">Schedule Consultation</button>

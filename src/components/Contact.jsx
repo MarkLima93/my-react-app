@@ -113,7 +113,6 @@ const Contact = () => {
         <div className="contact-section-pro">
           <h2>Ready to Start?</h2>
           <p>Schedule a consultation with our care team today</p>
-          <button className="contact-button-pro">Schedule Consultation</button>
           <div className="contact-features">
             <span><i className="fas fa-check"></i> Free Initial Consultation</span>
             <span><i className="fas fa-check"></i> Personalized Care Plans</span>

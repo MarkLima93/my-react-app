@@ -130,7 +130,6 @@ function SpecialNeeds() {
           <div className="contact-content">
             <h2>Begin Your Support Journey</h2>
             <p>Schedule a consultation to create your personalized care plan</p>
-            <button className="contact-button-pro">Schedule Consultation</button>
             <div className="contact-features">
               <span>✓ Free Initial Assessment</span>
               <span>✓ Flexible Care Options</span>

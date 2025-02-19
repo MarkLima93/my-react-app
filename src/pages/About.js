@@ -134,7 +134,6 @@ function About() {
           <div className="contact-content">
             <h2>Ready to Learn More?</h2>
             <p>Contact us today to discuss how we can support your care needs.</p>
-            <button className="contact-button">Schedule a Consultation</button>
           </div>
         </div>
       </div>

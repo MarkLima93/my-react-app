@@ -130,7 +130,6 @@ function SeniorCare() {
           <div className="contact-content">
             <h2>Ready to Discuss Your Care Needs?</h2>
             <p>Schedule a complimentary consultation with our care specialists</p>
-            <button className="contact-button-pro">Schedule Consultation</button>
             <div className="contact-features">
               <span>✓ Free Assessment</span>
               <span>✓ Customized Care Plans</span>
