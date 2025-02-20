@@ -40,8 +40,14 @@ function SpecialNeeds() {
           <h2 className="section-title">Our Specialized Care Programs</h2>
           <div className="premium-services-grid">
             <div className="premium-service-card">
-              <div className="service-icon">🌟</div>
-              <h3>Developmental Support</h3>
+              <div className="service-icon">
+                <img 
+                  src="https://static.wixstatic.com/media/4ca325_6671bf9e33954c61b97fbe56c79d6c65~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/special%20needs%20care.png"
+                  alt="Special Needs Care"
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
+              </div>
+              <h3>Engagement</h3>
               <ul className="service-list">
                 <li>Life skills training</li>
                 <li>Social interaction support</li>
@@ -50,7 +56,13 @@ function SpecialNeeds() {
               </ul>
             </div>
             <div className="premium-service-card">
-              <div className="service-icon">💪</div>
+              <div className="service-icon">
+                <img 
+                  src="https://static.wixstatic.com/media/4ca325_8ec4f90602644ac6ab02b9db337c7db7~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/meal%20prep.png"
+                  alt="Physical Support"
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
+              </div>
               <h3>Physical Support</h3>
               <ul className="service-list">
                 <li>Mobility assistance</li>
@@ -60,7 +72,13 @@ function SpecialNeeds() {
               </ul>
             </div>
             <div className="premium-service-card">
-              <div className="service-icon">🎯</div>
+              <div className="service-icon">
+                <img 
+                  src="https://static.wixstatic.com/media/4ca325_d080dd236d984a22a22d97c523837041~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/personal%20care.png"
+                  alt="Behavioral Support"
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
+              </div>
               <h3>Behavioral Support</h3>
               <ul className="service-list">
                 <li>Positive behavior strategies</li>

@@ -41,7 +41,13 @@ function ChildCare() {
           <h2 className="section-title">Our Premium Care Programs</h2>
           <div className="premium-services-grid">
             <div className="premium-service-card">
-              <div className="service-icon">👶</div>
+              <div className="service-icon">
+                <img 
+                  src="https://e7.pngegg.com/pngimages/229/392/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people.png"
+                  alt="Early Learning Icon"
+                  style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+                />
+              </div>
               <h3>Early Learning</h3>
               <ul className="service-list">
                 <li>Age-appropriate activities</li>
@@ -51,7 +57,13 @@ function ChildCare() {
               </ul>
             </div>
             <div className="premium-service-card">
-              <div className="service-icon">🎨</div>
+              <div className="service-icon">
+                <img 
+                  src="https://media.istockphoto.com/id/1421692024/vector/happy-kids-playing.jpg?s=612x612&w=0&k=20&c=dD6qM2LDHRK6hoyw16WEIEiwqiRRQmTvQML5ATSg0iY="
+                  alt="Creative Activities Icon"
+                  style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+                />
+              </div>
               <h3>Creative Activities</h3>
               <ul className="service-list">
                 <li>Arts and crafts</li>
@@ -61,7 +73,13 @@ function ChildCare() {
               </ul>
             </div>
             <div className="premium-service-card">
-              <div className="service-icon">🌟</div>
+              <div className="service-icon">
+                <img 
+                  src="https://cdn.vectorstock.com/i/1000v/34/56/logo-of-child-development-club-vector-5523456.jpg"
+                  alt="Development Support Icon"
+                  style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+                />
+              </div>
               <h3>Development Support</h3>
               <ul className="service-list">
                 <li>Motor skills development</li>
