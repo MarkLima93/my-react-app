@@ -58,65 +58,78 @@ const ScheduleAppointment = ({ isOpen, onClose }) => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    zIndex: 1000
+    zIndex: 1000,
+    padding: '0.5rem'
   };
 
   const contentStyle = {
     backgroundColor: 'white',
-    padding: '2rem',
-    borderRadius: '10px',
-    width: '90%',
-    maxWidth: '500px',
-    maxHeight: '90vh',
-    overflow: 'auto',
-    position: 'relative'
+    padding: '1rem 1rem 0.5rem 1rem',
+    borderRadius: '8px',
+    width: '100%',
+    maxWidth: '340px',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   };
 
   const closeButtonStyle = {
     position: 'absolute',
-    top: '1rem',
-    right: '1rem',
+    top: '0.5rem',
+    right: '0.5rem',
     background: 'none',
     border: 'none',
-    fontSize: '1.5rem',
+    fontSize: '1.25rem',
     cursor: 'pointer',
     color: '#666'
   };
 
+  const formStyle = {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.5rem'
+  };
+
   const inputGroupStyle = {
-    marginBottom: '1rem',
-    position: 'relative'
+    position: 'relative',
+    width: '100%'
   };
 
   const inputStyle = {
     width: '100%',
-    padding: '0.75rem',
-    paddingLeft: '2.5rem',
+    padding: '0.5rem',
+    paddingLeft: '1.75rem',
     border: '1px solid #e0e0e0',
-    borderRadius: '5px',
-    fontSize: '1rem',
+    borderRadius: '4px',
+    fontSize: '0.85rem',
     outline: 'none',
-    transition: 'border-color 0.3s ease'
+    transition: 'border-color 0.3s ease',
+    boxSizing: 'border-box',
+    height: '32px'
   };
 
   const iconStyle = {
     position: 'absolute',
-    left: '0.75rem',
+    left: '0.5rem',
     top: '50%',
     transform: 'translateY(-50%)',
-    color: '#4a90e2'
+    color: '#4a90e2',
+    fontSize: '0.8rem'
   };
 
   const buttonStyle = {
     width: '100%',
-    padding: '1rem',
+    padding: '0.5rem',
     backgroundColor: '#4a90e2',
     color: 'white',
     border: 'none',
-    borderRadius: '5px',
-    fontSize: '1.1rem',
+    borderRadius: '4px',
+    fontSize: '0.9rem',
     cursor: 'pointer',
-    marginTop: '1rem'
+    height: '32px',
+    marginTop: '0.25rem'
   };
 
   return (
@@ -127,17 +140,20 @@ const ScheduleAppointment = ({ isOpen, onClose }) => {
         <h2 style={{ 
           color: '#4a90e2', 
           textAlign: 'center', 
-          marginBottom: '0.5rem',
-          fontSize: '2rem'
+          margin: '0 0 0.25rem 0',
+          fontSize: '1.5rem',
+          lineHeight: '1'
         }}>Schedule Now</h2>
         
         <p style={{ 
           textAlign: 'center', 
           color: '#666', 
-          marginBottom: '2rem' 
+          margin: '0 0 0.5rem 0',
+          fontSize: '0.8rem',
+          lineHeight: '1.2'
         }}>Let's discuss how we can help you or your loved ones</p>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={formStyle}>
           <div style={inputGroupStyle}>
             <FaUser style={iconStyle} />
             <input
@@ -240,8 +256,9 @@ const ScheduleAppointment = ({ isOpen, onClose }) => {
               onChange={handleChange}
               style={{
                 ...inputStyle,
-                minHeight: '100px',
-                paddingLeft: '0.75rem'
+                height: '60px',
+                paddingLeft: '0.5rem',
+                resize: 'none'
               }}
             />
           </div>
@@ -253,9 +270,10 @@ const ScheduleAppointment = ({ isOpen, onClose }) => {
 
         <p style={{ 
           textAlign: 'center', 
-          marginTop: '1rem', 
-          fontSize: '0.9rem', 
-          color: '#666' 
+          margin: '0.5rem 0 0 0', 
+          fontSize: '0.75rem', 
+          color: '#666',
+          lineHeight: '1.2'
         }}>
           We'll get back to you within 24 hours to confirm your consultation
         </p>

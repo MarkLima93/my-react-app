@@ -80,21 +80,38 @@ const Contact = () => {
                 </div>
                 <div className="info-text">
                   <h3>Location</h3>
-                  <a 
-                    href="https://www.google.com/maps/search/?api=1&query=671+E+Mehring+Way+%232403+Cincinnati+OH+45202"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      color: '#666',
-                      textDecoration: 'none',
-                      transition: 'color 0.3s ease'
-                    }}
-                    onMouseOver={(e) => e.target.style.color = '#4a90e2'}
-                    onMouseOut={(e) => e.target.style.color = '#666'}
-                  >
-                    <p>671 E Mehring Way #2403</p>
-                    <p>Cincinnati, OH 45202</p>
-                  </a>
+                  <p style={{ margin: '0' }}>
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=671+E+Mehring+Way+%232403+Cincinnati+OH+45202"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: '#4a90e2',
+                        textDecoration: 'underline',
+                        transition: 'opacity 0.3s ease'
+                      }}
+                      onMouseOver={(e) => e.target.style.opacity = '0.8'}
+                      onMouseOut={(e) => e.target.style.opacity = '1'}
+                    >
+                      671 E Mehring Way #2403
+                    </a>
+                  </p>
+                  <p style={{ margin: '0' }}>
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=671+E+Mehring+Way+%232403+Cincinnati+OH+45202"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: '#4a90e2',
+                        textDecoration: 'underline',
+                        transition: 'opacity 0.3s ease'
+                      }}
+                      onMouseOver={(e) => e.target.style.opacity = '0.8'}
+                      onMouseOut={(e) => e.target.style.opacity = '1'}
+                    >
+                      Cincinnati, OH 45202
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -104,16 +121,16 @@ const Contact = () => {
                 </div>
                 <div className="info-text">
                   <h3>Phone</h3>
-                  <p>
+                  <p style={{ margin: '0' }}>
                     <a 
                       href="tel:+15135492336"
                       style={{
-                        color: '#666',
-                        textDecoration: 'none',
-                        transition: 'color 0.3s ease'
+                        color: '#4a90e2',
+                        textDecoration: 'underline',
+                        transition: 'opacity 0.3s ease'
                       }}
-                      onMouseOver={(e) => e.target.style.color = '#4a90e2'}
-                      onMouseOut={(e) => e.target.style.color = '#666'}
+                      onMouseOver={(e) => e.target.style.opacity = '0.8'}
+                      onMouseOut={(e) => e.target.style.opacity = '1'}
                     >
                       (513) 549-2336
                     </a>
@@ -128,7 +145,20 @@ const Contact = () => {
                 </div>
                 <div className="info-text">
                   <h3>Email</h3>
-                  <p>balancecentercare@gmail.com</p>
+                  <p style={{ margin: '0' }}>
+                    <a 
+                      href="mailto:balancecentercare@gmail.com"
+                      style={{
+                        color: '#4a90e2',
+                        textDecoration: 'underline',
+                        transition: 'opacity 0.3s ease'
+                      }}
+                      onMouseOver={(e) => e.target.style.opacity = '0.8'}
+                      onMouseOut={(e) => e.target.style.opacity = '1'}
+                    >
+                      balancecentercare@gmail.com
+                    </a>
+                  </p>
                   <p className="response-time">Response within 24 hours</p>
                 </div>
               </div>
