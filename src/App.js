@@ -98,7 +98,7 @@ function HomePage() {
           </div>
           <h2>Child Care</h2>
           <p>We understand every child is unique and deserves personalized care. Our caregivers provide a safe, nurturing environment where children can play and learn, tailored to your child's needs, ensuring comfort and happiness, all within the familiarity of your home.</p>
-          <NavLink to="/child-care" className="explore-button">Learn More</NavLink>
+          <NavLink to="/child-care" className="explore-button" onClick={() => window.scrollTo(0, 0)}>Learn More</NavLink>
         </div>
 
         <div className="service-card">
@@ -111,7 +111,7 @@ function HomePage() {
           </div>
           <h2>Special Needs Care</h2>
           <p>We understand the unique needs of individuals with special needs and provide compassionate care to support them. Our trained caregivers offer personalized attention, ensuring their comfort and well-being.</p>
-          <NavLink to="/special-needs" className="explore-button">Learn More</NavLink>
+          <NavLink to="/special-needs" className="explore-button" onClick={() => window.scrollTo(0, 0)}>Learn More</NavLink>
         </div>
       </div>
     </div>
@@ -146,12 +146,12 @@ function App() {
             <span></span>
           </div>
           <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <NavLink to="/" onClick={() => setIsMenuOpen(false)}>HOME</NavLink>
-            <NavLink to="/senior-care" onClick={() => setIsMenuOpen(false)}>SENIOR CARE</NavLink>
-            <NavLink to="/child-care" onClick={() => setIsMenuOpen(false)}>CHILD CARE</NavLink>
-            <NavLink to="/special-needs" onClick={() => setIsMenuOpen(false)}>SPECIAL NEEDS</NavLink>
-            <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>ABOUT US</NavLink>
-            <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT</NavLink>
+            <NavLink to="/" onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>HOME</NavLink>
+            <NavLink to="/senior-care" onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>SENIOR CARE</NavLink>
+            <NavLink to="/child-care" onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>CHILD CARE</NavLink>
+            <NavLink to="/special-needs" onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>SPECIAL NEEDS</NavLink>
+            <NavLink to="/about" onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>ABOUT US</NavLink>
+            <NavLink to="/contact" onClick={() => { setIsMenuOpen(false); window.scrollTo(0, 0); }}>CONTACT</NavLink>
           </div>
         </nav>
 
