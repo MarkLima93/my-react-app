@@ -1,8 +1,17 @@
 import React from 'react';
 
 function SpecialNeeds() {
+  const footerStyle = {
+    textAlign: 'center',
+    padding: '20px',
+    color: '#666',
+    borderTop: '1px solid #eee',
+    marginTop: '40px',
+    backgroundColor: '#f8f9fa'
+  };
+
   return (
-    <div className="senior-care-page">
+    <div className="about-page" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <div className="page-header-pro special-needs-header">
         <div className="header-content">
           <h1>Special Needs Care</h1>
@@ -10,7 +19,7 @@ function SpecialNeeds() {
         </div>
       </div>
 
-      <div className="content-container">
+      <div className="content-container" style={{ flex: 1 }}>
         <div className="intro-section">
           <div className="intro-card">
             <h2>Welcome to Premium Special Needs Care</h2>
@@ -39,52 +48,214 @@ function SpecialNeeds() {
         <div className="services-section">
           <h2 className="section-title">Our Specialized Care Programs</h2>
           <div className="premium-services-grid">
-            <div className="premium-service-card">
-              <div className="service-icon">
+            <div className="premium-service-card" style={{ textAlign: 'center' }}>
+              <div className="service-icon" style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                display: 'flex',
+                justifyContent: 'center'
+              }}>
                 <img 
                   src="https://static.wixstatic.com/media/4ca325_6671bf9e33954c61b97fbe56c79d6c65~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/special%20needs%20care.png"
                   alt="Special Needs Care"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    objectFit: 'contain',
+                    margin: '0 auto'
+                  }}
                 />
               </div>
-              <h3>Engagement</h3>
-              <ul className="service-list">
-                <li>Life skills training</li>
-                <li>Social interaction support</li>
-                <li>Communication assistance</li>
-                <li>Educational guidance</li>
+              <h3 style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0 auto 1rem auto'
+              }}>Engagement</h3>
+              <ul className="service-list" style={{ 
+                listStyle: 'none', 
+                padding: 0,
+                margin: '0 auto',
+                textAlign: 'center',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Life skills training</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Social interaction support</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Communication assistance</li>
+                <li style={{ 
+                  padding: '8px 0',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Educational guidance</li>
               </ul>
             </div>
-            <div className="premium-service-card">
-              <div className="service-icon">
+            <div className="premium-service-card" style={{ textAlign: 'center' }}>
+              <div className="service-icon" style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                display: 'flex',
+                justifyContent: 'center'
+              }}>
                 <img 
                   src="https://static.wixstatic.com/media/4ca325_8ec4f90602644ac6ab02b9db337c7db7~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/meal%20prep.png"
                   alt="Physical Support"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    objectFit: 'contain',
+                    margin: '0 auto'
+                  }}
                 />
               </div>
-              <h3>Physical Support</h3>
-              <ul className="service-list">
-                <li>Mobility assistance</li>
-                <li>Personal care support</li>
-                <li>Exercise programs</li>
-                <li>Physical therapy coordination</li>
+              <h3 style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0 auto 1rem auto'
+              }}>Physical Support</h3>
+              <ul className="service-list" style={{ 
+                listStyle: 'none', 
+                padding: 0,
+                margin: '0 auto',
+                textAlign: 'center',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Mobility assistance</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Personal care support</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Exercise programs</li>
+                <li style={{ 
+                  padding: '8px 0',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Physical therapy coordination</li>
               </ul>
             </div>
-            <div className="premium-service-card">
-              <div className="service-icon">
+            <div className="premium-service-card" style={{ textAlign: 'center' }}>
+              <div className="service-icon" style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                display: 'flex',
+                justifyContent: 'center'
+              }}>
                 <img 
                   src="https://static.wixstatic.com/media/4ca325_d080dd236d984a22a22d97c523837041~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/personal%20care.png"
                   alt="Behavioral Support"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    objectFit: 'contain',
+                    margin: '0 auto'
+                  }}
                 />
               </div>
-              <h3>Behavioral Support</h3>
-              <ul className="service-list">
-                <li>Positive behavior strategies</li>
-                <li>Emotional regulation</li>
-                <li>Coping skills development</li>
-                <li>Routine establishment</li>
+              <h3 style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0 auto 1rem auto'
+              }}>Behavioral Support</h3>
+              <ul className="service-list" style={{ 
+                listStyle: 'none', 
+                padding: 0,
+                margin: '0 auto',
+                textAlign: 'center',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Positive behavior strategies</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Emotional regulation</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Coping skills development</li>
+                <li style={{ 
+                  padding: '8px 0',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Routine establishment</li>
               </ul>
             </div>
           </div>
@@ -157,6 +328,10 @@ function SpecialNeeds() {
           </div>
         </div>
       </div>
+
+      <footer style={footerStyle}>
+        © 2024 by Balance Center LLC
+      </footer>
     </div>
   );
 }

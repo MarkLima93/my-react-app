@@ -2,8 +2,17 @@ import React from 'react';
 import './SeniorCare.css';  // Using the same CSS file since we've made it work for both pages
 
 function ChildCare() {
+  const footerStyle = {
+    textAlign: 'center',
+    padding: '20px',
+    color: '#666',
+    borderTop: '1px solid #eee',
+    marginTop: '40px',
+    backgroundColor: '#f8f9fa'
+  };
+
   return (
-    <div className="senior-care-page">
+    <div className="about-page" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <div className="page-header-pro child-care-header">
         <div className="header-content">
           <h1>Child Care Services</h1>
@@ -11,7 +20,7 @@ function ChildCare() {
         </div>
       </div>
 
-      <div className="content-container">
+      <div className="content-container" style={{ flex: 1 }}>
         <div className="intro-section">
           <div className="intro-card">
             <h2>Welcome to Premium Child Care Services</h2>
@@ -40,52 +49,214 @@ function ChildCare() {
         <div className="services-section">
           <h2 className="section-title">Our Premium Care Programs</h2>
           <div className="premium-services-grid">
-            <div className="premium-service-card">
-              <div className="service-icon">
+            <div className="premium-service-card" style={{ textAlign: 'center' }}>
+              <div className="service-icon" style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                display: 'flex',
+                justifyContent: 'center'
+              }}>
                 <img 
                   src="https://e7.pngegg.com/pngimages/229/392/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people.png"
                   alt="Early Learning Icon"
-                  style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+                  style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    objectFit: 'contain',
+                    margin: '0 auto'
+                  }}
                 />
               </div>
-              <h3>Early Learning</h3>
-              <ul className="service-list">
-                <li>Age-appropriate activities</li>
-                <li>Educational games</li>
-                <li>Social development</li>
-                <li>Creative expression</li>
+              <h3 style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0 auto 1rem auto'
+              }}>Early Learning</h3>
+              <ul className="service-list" style={{ 
+                listStyle: 'none', 
+                padding: 0,
+                margin: '0 auto',
+                textAlign: 'center',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Age-appropriate activities</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Educational games</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Social development</li>
+                <li style={{ 
+                  padding: '8px 0',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Creative expression</li>
               </ul>
             </div>
-            <div className="premium-service-card">
-              <div className="service-icon">
+            <div className="premium-service-card" style={{ textAlign: 'center' }}>
+              <div className="service-icon" style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                display: 'flex',
+                justifyContent: 'center'
+              }}>
                 <img 
                   src="https://media.istockphoto.com/id/1421692024/vector/happy-kids-playing.jpg?s=612x612&w=0&k=20&c=dD6qM2LDHRK6hoyw16WEIEiwqiRRQmTvQML5ATSg0iY="
                   alt="Creative Activities Icon"
-                  style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+                  style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    objectFit: 'contain',
+                    margin: '0 auto'
+                  }}
                 />
               </div>
-              <h3>Creative Activities</h3>
-              <ul className="service-list">
-                <li>Arts and crafts</li>
-                <li>Music and movement</li>
-                <li>Imaginative play</li>
-                <li>Storytelling sessions</li>
+              <h3 style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0 auto 1rem auto'
+              }}>Creative Activities</h3>
+              <ul className="service-list" style={{ 
+                listStyle: 'none', 
+                padding: 0,
+                margin: '0 auto',
+                textAlign: 'center',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Arts and crafts</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Music and movement</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Imaginative play</li>
+                <li style={{ 
+                  padding: '8px 0',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Storytelling sessions</li>
               </ul>
             </div>
-            <div className="premium-service-card">
-              <div className="service-icon">
+            <div className="premium-service-card" style={{ textAlign: 'center' }}>
+              <div className="service-icon" style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                display: 'flex',
+                justifyContent: 'center'
+              }}>
                 <img 
                   src="https://cdn.vectorstock.com/i/1000v/34/56/logo-of-child-development-club-vector-5523456.jpg"
                   alt="Development Support Icon"
-                  style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+                  style={{ 
+                    width: '60px', 
+                    height: '60px', 
+                    objectFit: 'contain',
+                    margin: '0 auto'
+                  }}
                 />
               </div>
-              <h3>Development Support</h3>
-              <ul className="service-list">
-                <li>Motor skills development</li>
-                <li>Language enrichment</li>
-                <li>Social interaction</li>
-                <li>Emotional growth</li>
+              <h3 style={{ 
+                textAlign: 'center', 
+                marginBottom: '1rem',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0 auto 1rem auto'
+              }}>Development Support</h3>
+              <ul className="service-list" style={{ 
+                listStyle: 'none', 
+                padding: 0,
+                margin: '0 auto',
+                textAlign: 'center',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Motor skills development</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Language enrichment</li>
+                <li style={{ 
+                  padding: '8px 0', 
+                  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Social interaction</li>
+                <li style={{ 
+                  padding: '8px 0',
+                  width: '90%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>Emotional growth</li>
               </ul>
             </div>
           </div>
@@ -158,6 +329,10 @@ function ChildCare() {
           </div>
         </div>
       </div>
+
+      <footer style={footerStyle}>
+        © 2024 by Balance Center LLC
+      </footer>
     </div>
   );
 }
