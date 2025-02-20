@@ -31,11 +31,11 @@ function ChildCare() {
             </p>
             <div className="experience-badges">
               <div className="badge">
-                <span className="badge-number">13+</span>
+                <span className="badge-number">10+</span>
                 <span className="badge-text">Years Experience</span>
               </div>
               <div className="badge">
-                <span className="badge-number">1000+</span>
+                <span className="badge-number">100+</span>
                 <span className="badge-text">Families Served</span>
               </div>
               <div className="badge">
@@ -197,7 +197,7 @@ function ChildCare() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://cdn.vectorstock.com/i/1000v/34/56/logo-of-child-development-club-vector-5523456.jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHq-ou5vEGyIwgGdrKv4P9mvQB58E_yaTH4w&s"
                   alt="Development Support Icon"
                   style={{ 
                     width: '60px', 
@@ -264,26 +264,80 @@ function ChildCare() {
 
         <div className="care-process">
           <h2 className="section-title">Our Care Approach</h2>
-          <div className="process-timeline">
-            <div className="process-step">
-              <div className="step-number">01</div>
-              <h3>Initial Meeting</h3>
-              <p>Understanding your child's needs and interests</p>
+          <div className="process-timeline" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '2rem',
+            padding: '2rem 0',
+            margin: '0 2rem'
+          }}>
+            <div className="process-step" style={{
+              padding: '3rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1.5rem'
+              }}>01</div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Initial Meeting</h3>
+              <p style={{ lineHeight: '1.6' }}>Understanding your child's needs and interests</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">02</div>
-              <h3>Care Planning</h3>
-              <p>Creating a tailored development program</p>
+            <div className="process-step" style={{
+              padding: '3rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1.5rem'
+              }}>02</div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Care Planning</h3>
+              <p style={{ lineHeight: '1.6' }}>Creating a tailored development program</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">03</div>
-              <h3>Caregiver Selection</h3>
-              <p>Matching with experienced child care professionals</p>
+            <div className="process-step" style={{
+              padding: '3rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1.5rem'
+              }}>03</div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Caregiver Selection</h3>
+              <p style={{ lineHeight: '1.6' }}>Matching with experienced child care professionals</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">04</div>
-              <h3>Regular Updates</h3>
-              <p>Continuous communication and progress reports</p>
+            <div className="process-step" style={{
+              padding: '3rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1.5rem'
+              }}>04</div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Regular Updates</h3>
+              <p style={{ lineHeight: '1.6' }}>Continuous communication and progress reports</p>
             </div>
           </div>
         </div>

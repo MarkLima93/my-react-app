@@ -100,7 +100,7 @@ function HomePage() {
         <div className="service-card">
           <div className="service-card-image">
             <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk2DCvVJht5HWCqA3pRzfmPtqYA7gyaXf5KQ&s"
+              src="https://static.wixstatic.com/media/4ca325_0f96faecf2f3409096648d47d0d37088~mv2.jpg/v1/fill/w_511,h_486,al_c,lg_1,q_80,enc_avif,quality_auto/BC%20special%20needs.jpg"
               alt="Special needs care and support"
               className="card-image"
             />

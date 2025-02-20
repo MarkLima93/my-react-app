@@ -30,11 +30,11 @@ function SeniorCare() {
             </p>
             <div className="experience-badges">
               <div className="badge">
-                <span className="badge-number">13+</span>
+                <span className="badge-number">10+</span>
                 <span className="badge-text">Years Experience</span>
               </div>
               <div className="badge">
-                <span className="badge-number">1000+</span>
+                <span className="badge-number">100+</span>
                 <span className="badge-text">Families Served</span>
               </div>
               <div className="badge">
@@ -227,26 +227,80 @@ function SeniorCare() {
 
         <div className="care-process">
           <h2 className="section-title">Our Care Process</h2>
-          <div className="process-timeline">
-            <div className="process-step">
-              <div className="step-number">01</div>
-              <h3>Initial Consultation</h3>
-              <p>Comprehensive assessment of care needs and preferences</p>
+          <div className="process-timeline" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '2rem',
+            padding: '2rem 0',
+            margin: '0 2rem'
+          }}>
+            <div className="process-step" style={{
+              padding: '3rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1.5rem'
+              }}>01</div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Initial Consultation</h3>
+              <p style={{ lineHeight: '1.6' }}>Comprehensive assessment of care needs and preferences</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">02</div>
-              <h3>Care Planning</h3>
-              <p>Development of personalized care strategy</p>
+            <div className="process-step" style={{
+              padding: '3rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1.5rem'
+              }}>02</div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Care Planning</h3>
+              <p style={{ lineHeight: '1.6' }}>Development of personalized care strategy</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">03</div>
-              <h3>Caregiver Matching</h3>
-              <p>Selection of compatible care professional</p>
+            <div className="process-step" style={{
+              padding: '3rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1.5rem'
+              }}>03</div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Caregiver Matching</h3>
+              <p style={{ lineHeight: '1.6' }}>Selection of compatible care professional</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">04</div>
-              <h3>Ongoing Support</h3>
-              <p>Regular monitoring and care plan adjustments</p>
+            <div className="process-step" style={{
+              padding: '3rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1.5rem'
+              }}>04</div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Ongoing Support</h3>
+              <p style={{ lineHeight: '1.6' }}>Regular monitoring and care plan adjustments</p>
             </div>
           </div>
         </div>

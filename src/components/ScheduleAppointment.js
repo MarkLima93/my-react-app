@@ -1,234 +1,267 @@
-import React, { useState, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
+import { FaUser, FaEnvelope, FaPhone, FaCalendar, FaClock, FaComments } from 'react-icons/fa';
 
-function ScheduleAppointment({ isOpen, onClose }) {
+const ScheduleAppointment = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
+    date: '',
+    time: '',
     serviceType: '',
-    preferredDate: '',
-    preferredTime: '',
     message: ''
   });
 
   const [phoneError, setPhoneError] = useState('');
-  const [submitStatus, setSubmitStatus] = useState({ message: '', isError: false });
-
-  useEffect(() => {
-    // Initialize EmailJS with your public key
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
-  }, []);
-
-  const formatPhoneNumber = (value) => {
-    // Remove all non-digits
-    const phoneNumber = value.replace(/\D/g, '');
-    
-    // Format the number as XXX-XXX-XXXX
-    if (phoneNumber.length <= 3) {
-      return phoneNumber;
-    } else if (phoneNumber.length <= 6) {
-      return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3)}`;
-    } else {
-      return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
-    }
-  };
-
-  const validatePhoneNumber = (phoneNumber) => {
-    // Remove all non-digits for validation
-    const cleaned = phoneNumber.replace(/\D/g, '');
-    
-    // Check if it's a valid 10-digit number
-    if (cleaned.length !== 10) {
-      return 'Please enter a valid 10-digit phone number';
-    }
-    
-    // Check if the area code is valid (no 0 or 1 as first digit)
-    if (cleaned[0] === '0' || cleaned[0] === '1') {
-      return 'Please enter a valid area code';
-    }
-    
-    return '';
-  };
-
-  const handlePhoneChange = (e) => {
-    const input = e.target.value;
-    const formatted = formatPhoneNumber(input);
-    
-    // Only update if we haven't reached max length
-    if (input.replace(/\D/g, '').length <= 10) {
-      setFormData({...formData, phone: formatted});
-    }
-    
-    // Validate and set error
-    setPhoneError(validatePhoneNumber(formatted));
-  };
-
-  const sendEmail = async (templateParams) => {
-    try {
-      const response = await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        {
-          to_email: 'BalanceCenterCare@gmail.com',
-          from_name: templateParams.name,
-          from_email: templateParams.email,
-          phone_number: templateParams.phone,
-          service_type: templateParams.serviceType,
-          preferred_date: templateParams.preferredDate,
-          preferred_time: templateParams.preferredTime,
-          message: templateParams.message
-        }
-      );
-
-      if (response.status === 200) {
-        setSubmitStatus({
-          message: 'Consultation scheduled successfully! We will contact you soon.',
-          isError: false
-        });
-        setTimeout(() => {
-          onClose();
-          setSubmitStatus({ message: '', isError: false });
-        }, 3000);
-      }
-    } catch (error) {
-      setSubmitStatus({
-        message: 'Failed to schedule consultation. Please try again.',
-        isError: true
-      });
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    // Check if there are any validation errors
-    const phoneValidation = validatePhoneNumber(formData.phone);
-    if (phoneValidation) {
-      setPhoneError(phoneValidation);
-      return;
-    }
-    
-    // Send email
-    await sendEmail(formData);
-  };
 
   if (!isOpen) return null;
 
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    return phoneRegex.test(phone);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    
+    if (name === 'phone') {
+      if (!validatePhone(value)) {
+        setPhoneError('Please enter a valid phone number (e.g., 123-456-7890)');
+      } else {
+        setPhoneError('');
+      }
+    }
+    
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validatePhone(formData.phone)) {
+      setPhoneError('Please enter a valid phone number before submitting');
+      return;
+    }
+    console.log('Schedule Request:', formData);
+    onClose();
+  };
+
+  const modalStyle = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000
+  };
+
+  const contentStyle = {
+    backgroundColor: 'white',
+    padding: '2rem',
+    borderRadius: '10px',
+    width: '90%',
+    maxWidth: '500px',
+    maxHeight: '90vh',
+    overflow: 'auto',
+    position: 'relative'
+  };
+
+  const closeButtonStyle = {
+    position: 'absolute',
+    top: '1rem',
+    right: '1rem',
+    background: 'none',
+    border: 'none',
+    fontSize: '1.5rem',
+    cursor: 'pointer',
+    color: '#666'
+  };
+
+  const inputGroupStyle = {
+    marginBottom: '1rem',
+    position: 'relative'
+  };
+
+  const inputStyle = {
+    width: '100%',
+    padding: '0.75rem',
+    paddingLeft: '2.5rem',
+    border: '1px solid #e0e0e0',
+    borderRadius: '5px',
+    fontSize: '1rem',
+    outline: 'none',
+    transition: 'border-color 0.3s ease'
+  };
+
+  const iconStyle = {
+    position: 'absolute',
+    left: '0.75rem',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    color: '#4a90e2'
+  };
+
+  const buttonStyle = {
+    width: '100%',
+    padding: '1rem',
+    backgroundColor: '#4a90e2',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    fontSize: '1.1rem',
+    cursor: 'pointer',
+    marginTop: '1rem'
+  };
+
   return (
-    <div className="schedule-modal-overlay">
-      <div className="schedule-modal">
-        <button className="close-button" onClick={onClose}>&times;</button>
-        <h2>Schedule a Consultation</h2>
-        <p className="modal-subtitle">Let us help you find the perfect care solution</p>
+    <div style={modalStyle}>
+      <div style={contentStyle}>
+        <button style={closeButtonStyle} onClick={onClose}>×</button>
         
-        <form onSubmit={handleSubmit} className="schedule-form">
-          <div className="form-grid">
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                required
-              />
-            </div>
+        <h2 style={{ 
+          color: '#4a90e2', 
+          textAlign: 'center', 
+          marginBottom: '0.5rem',
+          fontSize: '2rem'
+        }}>Schedule Now</h2>
+        
+        <p style={{ 
+          textAlign: 'center', 
+          color: '#666', 
+          marginBottom: '2rem' 
+        }}>Let's discuss how we can help you or your loved ones</p>
 
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                value={formData.phone}
-                onChange={handlePhoneChange}
-                placeholder="XXX-XXX-XXXX"
-                required
-              />
-              {phoneError && <span className="error-message" style={{ color: 'red', fontSize: '0.8rem' }}>{phoneError}</span>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="serviceType">Service Type</label>
-              <select
-                id="serviceType"
-                value={formData.serviceType}
-                onChange={(e) => setFormData({...formData, serviceType: e.target.value})}
-                required
-              >
-                <option value="">Select a service</option>
-                <option value="senior">Senior Care</option>
-                <option value="child">Child Care</option>
-                <option value="special">Special Needs Care</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="preferredDate">Preferred Date</label>
-              <input
-                type="date"
-                id="preferredDate"
-                value={formData.preferredDate}
-                onChange={(e) => setFormData({...formData, preferredDate: e.target.value})}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="preferredTime">Preferred Time</label>
-              <select
-                id="preferredTime"
-                value={formData.preferredTime}
-                onChange={(e) => setFormData({...formData, preferredTime: e.target.value})}
-                required
-              >
-                <option value="">Select a time</option>
-                <option value="morning">Morning (9AM - 12PM)</option>
-                <option value="afternoon">Afternoon (12PM - 4PM)</option>
-                <option value="evening">Evening (4PM - 7PM)</option>
-              </select>
-            </div>
+        <form onSubmit={handleSubmit}>
+          <div style={inputGroupStyle}>
+            <FaUser style={iconStyle} />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              style={inputStyle}
+            />
           </div>
 
-          <div className="form-group full-width">
-            <label htmlFor="message">Additional Information</label>
+          <div style={inputGroupStyle}>
+            <FaEnvelope style={iconStyle} />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              style={inputStyle}
+            />
+          </div>
+
+          <div style={inputGroupStyle}>
+            <FaPhone style={iconStyle} />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number (e.g., 123-456-7890)"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              style={{
+                ...inputStyle,
+                borderColor: phoneError ? '#ff4444' : '#e0e0e0'
+              }}
+            />
+            {phoneError && (
+              <p style={{ 
+                color: '#ff4444', 
+                fontSize: '0.8rem', 
+                marginTop: '0.25rem',
+                marginBottom: 0 
+              }}>{phoneError}</p>
+            )}
+          </div>
+
+          <div style={inputGroupStyle}>
+            <FaCalendar style={iconStyle} />
+            <input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+              required
+              style={inputStyle}
+            />
+          </div>
+
+          <div style={inputGroupStyle}>
+            <FaClock style={iconStyle} />
+            <select
+              name="time"
+              value={formData.time}
+              onChange={handleChange}
+              required
+              style={inputStyle}
+            >
+              <option value="">Select Preferred Time</option>
+              <option value="morning">Morning (9AM - 12PM)</option>
+              <option value="afternoon">Afternoon (12PM - 4PM)</option>
+              <option value="evening">Evening (4PM - 7PM)</option>
+            </select>
+          </div>
+
+          <div style={inputGroupStyle}>
+            <FaComments style={iconStyle} />
+            <select
+              name="serviceType"
+              value={formData.serviceType}
+              onChange={handleChange}
+              required
+              style={inputStyle}
+            >
+              <option value="">Select Service Type</option>
+              <option value="senior">Senior Care</option>
+              <option value="child">Child Care</option>
+              <option value="special">Special Needs Care</option>
+            </select>
+          </div>
+
+          <div style={inputGroupStyle}>
             <textarea
-              id="message"
+              name="message"
+              placeholder="Additional Notes or Questions"
               value={formData.message}
-              onChange={(e) => setFormData({...formData, message: e.target.value})}
-              rows="4"
-            ></textarea>
+              onChange={handleChange}
+              style={{
+                ...inputStyle,
+                minHeight: '100px',
+                paddingLeft: '0.75rem'
+              }}
+            />
           </div>
 
-          {submitStatus.message && (
-            <div className={`submit-status ${submitStatus.isError ? 'error' : 'success'}`} 
-                 style={{ 
-                   color: submitStatus.isError ? 'red' : 'green',
-                   textAlign: 'center',
-                   marginTop: '1rem'
-                 }}>
-              {submitStatus.message}
-            </div>
-          )}
-
-          <div className="form-footer">
-            <button type="submit" className="submit-button">Schedule Consultation</button>
-          </div>
+          <button type="submit" style={buttonStyle}>
+            Schedule Now
+          </button>
         </form>
+
+        <p style={{ 
+          textAlign: 'center', 
+          marginTop: '1rem', 
+          fontSize: '0.9rem', 
+          color: '#666' 
+        }}>
+          We'll get back to you within 24 hours to confirm your consultation
+        </p>
       </div>
     </div>
   );
-}
+};
 
 export default ScheduleAppointment; 

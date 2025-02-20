@@ -30,11 +30,11 @@ function SpecialNeeds() {
             </p>
             <div className="experience-badges">
               <div className="badge">
-                <span className="badge-number">13+</span>
+                <span className="badge-number">10+</span>
                 <span className="badge-text">Years Experience</span>
               </div>
               <div className="badge">
-                <span className="badge-number">1000+</span>
+                <span className="badge-number">100+</span>
                 <span className="badge-text">Families Served</span>
               </div>
               <div className="badge">
@@ -56,8 +56,8 @@ function SpecialNeeds() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://static.wixstatic.com/media/4ca325_6671bf9e33954c61b97fbe56c79d6c65~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/special%20needs%20care.png"
-                  alt="Special Needs Care"
+                  src="https://e7.pngegg.com/pngimages/229/392/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people.png"
+                  alt="Early Learning Icon"
                   style={{ 
                     width: '60px', 
                     height: '60px', 
@@ -263,24 +263,77 @@ function SpecialNeeds() {
 
         <div className="care-process">
           <h2 className="section-title">Our Care Philosophy</h2>
-          <div className="process-timeline">
-            <div className="process-step">
-              <div className="step-number">01</div>
+          <div className="process-timeline" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '2rem',
+            padding: '2rem 0'
+          }}>
+            <div className="process-step" style={{
+              padding: '2rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1rem'
+              }}>01</div>
               <h3>Person-Centered Care</h3>
               <p>Tailored support plans focused on individual strengths</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">02</div>
+            <div className="process-step" style={{
+              padding: '2rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1rem'
+              }}>02</div>
               <h3>Family Collaboration</h3>
               <p>Active partnership in care planning and decisions</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">03</div>
+            <div className="process-step" style={{
+              padding: '2rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1rem'
+              }}>03</div>
               <h3>Continuous Support</h3>
               <p>24/7 availability with consistent care coordination</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">04</div>
+            <div className="process-step" style={{
+              padding: '2rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: '10px',
+              backgroundColor: 'white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'center'
+            }}>
+              <div className="step-number" style={{
+                fontSize: '2.5rem',
+                color: '#4a90e2',
+                opacity: '0.5',
+                marginBottom: '1rem'
+              }}>04</div>
               <h3>Professional Excellence</h3>
               <p>Highly trained staff with specialized certifications</p>
             </div>

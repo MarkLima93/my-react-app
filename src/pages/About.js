@@ -46,7 +46,7 @@ const About = () => {
 
           <section className="quick-stats">
             <div className="stat">
-              <span className="stat-value">13+</span>
+              <span className="stat-value">10+</span>
               <span className="stat-label">Years of Excellence</span>
             </div>
             <div className="vertical-divider"></div>
@@ -56,7 +56,7 @@ const About = () => {
             </div>
             <div className="vertical-divider"></div>
             <div className="stat">
-              <span className="stat-value">1000+</span>
+              <span className="stat-value">100+</span>
               <span className="stat-label">Families Served</span>
             </div>
           </section>
@@ -132,7 +132,7 @@ const About = () => {
                   <p style={{
                     color: '#666',
                     lineHeight: '1.6'
-                  }}>With over 13 years of experience and 1000+ families served, we're a name you can trust for quality care.</p>
+                  }}>With over 10 years of experience and 100+ families served, we're a name you can trust for quality care.</p>
                 </div>
               </div>
 

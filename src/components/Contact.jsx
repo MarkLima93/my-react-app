@@ -80,8 +80,21 @@ const Contact = () => {
                 </div>
                 <div className="info-text">
                   <h3>Location</h3>
-                  <p>671 E Mehring Way #2403</p>
-                  <p>Cincinnati, OH 45202</p>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=671+E+Mehring+Way+%232403+Cincinnati+OH+45202"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: '#666',
+                      textDecoration: 'none',
+                      transition: 'color 0.3s ease'
+                    }}
+                    onMouseOver={(e) => e.target.style.color = '#4a90e2'}
+                    onMouseOut={(e) => e.target.style.color = '#666'}
+                  >
+                    <p>671 E Mehring Way #2403</p>
+                    <p>Cincinnati, OH 45202</p>
+                  </a>
                 </div>
               </div>
 
@@ -91,7 +104,20 @@ const Contact = () => {
                 </div>
                 <div className="info-text">
                   <h3>Phone</h3>
-                  <p>(513) 549-2336</p>
+                  <p>
+                    <a 
+                      href="tel:+15135492336"
+                      style={{
+                        color: '#666',
+                        textDecoration: 'none',
+                        transition: 'color 0.3s ease'
+                      }}
+                      onMouseOver={(e) => e.target.style.color = '#4a90e2'}
+                      onMouseOut={(e) => e.target.style.color = '#666'}
+                    >
+                      (513) 549-2336
+                    </a>
+                  </p>
                   <p className="availability">Available 24/7</p>
                 </div>
               </div>

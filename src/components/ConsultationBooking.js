@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCalendar, FaClock, FaUser, FaPhone, FaEnvelope, FaComments } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaCalendar, FaClock, FaComments } from 'react-icons/fa';
 
 const ConsultationBooking = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -12,21 +12,40 @@ const ConsultationBooking = ({ isOpen, onClose }) => {
     message: ''
   });
 
+  const [phoneError, setPhoneError] = useState('');
+
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Consultation Request:', formData);
-    // You would typically send this data to your backend
-    onClose();
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    return phoneRegex.test(phone);
   };
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
+    
+    if (name === 'phone') {
+      if (!validatePhone(value)) {
+        setPhoneError('Please enter a valid phone number (e.g., 123-456-7890)');
+      } else {
+        setPhoneError('');
+      }
+    }
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validatePhone(formData.phone)) {
+      setPhoneError('Please enter a valid phone number before submitting');
+      return;
+    }
+    console.log('Consultation Request:', formData);
+    onClose();
   };
 
   const modalStyle = {
@@ -47,52 +66,10 @@ const ConsultationBooking = ({ isOpen, onClose }) => {
     padding: '2rem',
     borderRadius: '10px',
     width: '90%',
-    maxWidth: '600px',
+    maxWidth: '500px',
     maxHeight: '90vh',
     overflow: 'auto',
     position: 'relative'
-  };
-
-  const headerStyle = {
-    textAlign: 'center',
-    marginBottom: '2rem'
-  };
-
-  const formStyle = {
-    display: 'grid',
-    gap: '1.5rem'
-  };
-
-  const inputGroupStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '1rem',
-    backgroundColor: '#f8f9fa',
-    padding: '0.75rem',
-    borderRadius: '5px',
-    border: '1px solid #e0e0e0'
-  };
-
-  const inputStyle = {
-    flex: 1,
-    border: 'none',
-    background: 'none',
-    outline: 'none',
-    fontSize: '1rem',
-    color: '#333'
-  };
-
-  const buttonStyle = {
-    backgroundColor: '#4a90e2',
-    color: 'white',
-    padding: '1rem',
-    border: 'none',
-    borderRadius: '5px',
-    fontSize: '1.1rem',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-    width: '100%',
-    marginTop: '1rem'
   };
 
   const closeButtonStyle = {
@@ -106,19 +83,63 @@ const ConsultationBooking = ({ isOpen, onClose }) => {
     color: '#666'
   };
 
+  const inputGroupStyle = {
+    marginBottom: '1rem',
+    position: 'relative'
+  };
+
+  const inputStyle = {
+    width: '100%',
+    padding: '0.75rem',
+    paddingLeft: '2.5rem',
+    border: '1px solid #e0e0e0',
+    borderRadius: '5px',
+    fontSize: '1rem',
+    outline: 'none',
+    transition: 'border-color 0.3s ease'
+  };
+
+  const iconStyle = {
+    position: 'absolute',
+    left: '0.75rem',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    color: '#4a90e2'
+  };
+
+  const buttonStyle = {
+    width: '100%',
+    padding: '1rem',
+    backgroundColor: '#4a90e2',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    fontSize: '1.1rem',
+    cursor: 'pointer',
+    marginTop: '1rem'
+  };
+
   return (
     <div style={modalStyle}>
       <div style={contentStyle}>
-        <button style={closeButtonStyle} onClick={onClose}>&times;</button>
+        <button style={closeButtonStyle} onClick={onClose}>×</button>
         
-        <div style={headerStyle}>
-          <h2 style={{ color: '#4a90e2', marginBottom: '0.5rem' }}>Schedule Now</h2>
-          <p style={{ color: '#666' }}>Let's discuss how we can help you or your loved ones</p>
-        </div>
+        <h2 style={{ 
+          color: '#4a90e2', 
+          textAlign: 'center', 
+          marginBottom: '0.5rem',
+          fontSize: '2rem'
+        }}>Schedule Now</h2>
+        
+        <p style={{ 
+          textAlign: 'center', 
+          color: '#666', 
+          marginBottom: '2rem' 
+        }}>Let's discuss how we can help you or your loved ones</p>
 
-        <form onSubmit={handleSubmit} style={formStyle}>
+        <form onSubmit={handleSubmit}>
           <div style={inputGroupStyle}>
-            <FaUser color="#4a90e2" />
+            <FaUser style={iconStyle} />
             <input
               type="text"
               name="name"
@@ -131,7 +152,7 @@ const ConsultationBooking = ({ isOpen, onClose }) => {
           </div>
 
           <div style={inputGroupStyle}>
-            <FaEnvelope color="#4a90e2" />
+            <FaEnvelope style={iconStyle} />
             <input
               type="email"
               name="email"
@@ -144,20 +165,31 @@ const ConsultationBooking = ({ isOpen, onClose }) => {
           </div>
 
           <div style={inputGroupStyle}>
-            <FaPhone color="#4a90e2" />
+            <FaPhone style={iconStyle} />
             <input
               type="tel"
               name="phone"
-              placeholder="Phone Number"
+              placeholder="Phone Number (e.g., 123-456-7890)"
               value={formData.phone}
               onChange={handleChange}
               required
-              style={inputStyle}
+              style={{
+                ...inputStyle,
+                borderColor: phoneError ? '#ff4444' : '#e0e0e0'
+              }}
             />
+            {phoneError && (
+              <p style={{ 
+                color: '#ff4444', 
+                fontSize: '0.8rem', 
+                marginTop: '0.25rem',
+                marginBottom: 0 
+              }}>{phoneError}</p>
+            )}
           </div>
 
           <div style={inputGroupStyle}>
-            <FaCalendar color="#4a90e2" />
+            <FaCalendar style={iconStyle} />
             <input
               type="date"
               name="date"
@@ -169,7 +201,7 @@ const ConsultationBooking = ({ isOpen, onClose }) => {
           </div>
 
           <div style={inputGroupStyle}>
-            <FaClock color="#4a90e2" />
+            <FaClock style={iconStyle} />
             <select
               name="time"
               value={formData.time}
@@ -185,7 +217,7 @@ const ConsultationBooking = ({ isOpen, onClose }) => {
           </div>
 
           <div style={inputGroupStyle}>
-            <FaComments color="#4a90e2" />
+            <FaComments style={iconStyle} />
             <select
               name="serviceType"
               value={formData.serviceType}
@@ -209,7 +241,7 @@ const ConsultationBooking = ({ isOpen, onClose }) => {
               style={{
                 ...inputStyle,
                 minHeight: '100px',
-                resize: 'vertical'
+                paddingLeft: '0.75rem'
               }}
             />
           </div>
