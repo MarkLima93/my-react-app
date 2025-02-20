@@ -189,6 +189,7 @@
 .consultation-logo {
   height: 80px;
   width: auto;
+  border-radius: 56%;
 }
 
 .consultation-text {
