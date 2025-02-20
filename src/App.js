@@ -7,6 +7,10 @@ import SpecialNeeds from './pages/SpecialNeeds';
 import About from './pages/About';
 import Contact from './components/Contact';
 import ScheduleAppointment from './components/ScheduleAppointment';
+import BalanceCenterLogo from './images/BalanceCenterLogo.jpg';
+import SeniorCarePic from './images/SeniorCarePic.jpg';
+import ChildCarePic from './images/ChildCarePic.avif';
+import SpecialNeedsPic from './images/SpecialNeedsPic.avif';
 
 function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -74,7 +78,7 @@ function HomePage() {
         <div className="service-card">
           <div className="service-card-image">
             <img 
-              src="https://abetterwayinhomecare.com/wp-content/uploads/2024/11/1fe62bf24d3590aaa6e8fd7c6f9843d9.jpg"
+              src={SeniorCarePic}
               alt="Happy elderly couple receiving care"
               className="card-image"
             />
@@ -87,7 +91,7 @@ function HomePage() {
         <div className="service-card">
           <div className="service-card-image">
             <img 
-              src="https://static.wixstatic.com/media/4ca325_ba3f23f8e44b45d59c2cd9ba607797fa~mv2.jpg/v1/fill/w_515,h_490,al_c,lg_1,q_80,enc_avif,quality_auto/BC%20Child%20care.jpg"
+              src={ChildCarePic}
               alt="Children playing and having fun together"
               className="card-image"
             />
@@ -100,7 +104,7 @@ function HomePage() {
         <div className="service-card">
           <div className="service-card-image">
             <img 
-              src="https://static.wixstatic.com/media/4ca325_0f96faecf2f3409096648d47d0d37088~mv2.jpg/v1/fill/w_511,h_486,al_c,lg_1,q_80,enc_avif,quality_auto/BC%20special%20needs.jpg"
+              src={SpecialNeedsPic}
               alt="Special needs care and support"
               className="card-image"
             />
@@ -129,7 +133,7 @@ function App() {
           <div className="logo">
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <img 
-                src="https://static.wixstatic.com/media/4ca325_a397b887d2354dff9eb0157c74f760ad~mv2.png/v1/crop/x_0,y_3,w_472,h_423/fill/w_196,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Balance%20Center%20Home%20Care%20Logo%20TM%20Clear.png"
+                src={BalanceCenterLogo}
                 alt="Balance Center Logo"
                 style={{ height: '40px', width: 'auto' }}
               />
@@ -162,7 +166,7 @@ function App() {
 
         <div className="consultation-banner">
           <img 
-            src="https://static.wixstatic.com/media/4ca325_a397b887d2354dff9eb0157c74f760ad~mv2.png/v1/crop/x_0,y_3,w_472,h_423/fill/w_196,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Balance%20Center%20Home%20Care%20Logo%20TM%20Clear.png"
+            src={BalanceCenterLogo}
             alt="Balance Center Logo"
             className="consultation-logo"
           />

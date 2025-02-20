@@ -1,4 +1,7 @@
 import React from 'react';
+import AlphabetCubes from '../images/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people (1).png';
+import CreativeActivities from '../images/CreativeActivties.jpg';
+import DevelopmentSupport from '../images/DevelopmentSupport.jpeg';
 import './SeniorCare.css';  // Using the same CSS file since we've made it work for both pages
 
 function ChildCare() {
@@ -57,7 +60,7 @@ function ChildCare() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://e7.pngegg.com/pngimages/229/392/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people.png"
+                  src={AlphabetCubes}
                   alt="Early Learning Icon"
                   style={{ 
                     width: '60px', 
@@ -127,7 +130,7 @@ function ChildCare() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://media.istockphoto.com/id/1421692024/vector/happy-kids-playing.jpg?s=612x612&w=0&k=20&c=dD6qM2LDHRK6hoyw16WEIEiwqiRRQmTvQML5ATSg0iY="
+                  src={CreativeActivities}
                   alt="Creative Activities Icon"
                   style={{ 
                     width: '60px', 
@@ -197,13 +200,14 @@ function ChildCare() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHq-ou5vEGyIwgGdrKv4P9mvQB58E_yaTH4w&s"
+                  src={DevelopmentSupport}
                   alt="Development Support Icon"
                   style={{ 
                     width: '60px', 
                     height: '60px', 
                     objectFit: 'contain',
-                    margin: '0 auto'
+                    margin: '0 auto',
+                    borderRadius: '50%'
                   }}
                 />
               </div>

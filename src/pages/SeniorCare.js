@@ -1,4 +1,7 @@
 import React from 'react';
+import PersonalCare from '../images/personalCare.avif';
+import HouseHold from '../images/houseHold.avif';
+import CompanionCare from '../images/CompanionCare.avif';
 
 function SeniorCare() {
   const footerStyle = {
@@ -56,7 +59,7 @@ function SeniorCare() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://static.wixstatic.com/media/4ca325_d080dd236d984a22a22d97c523837041~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/personal%20care.png"
+                  src={PersonalCare}
                   alt="Personal Care Icon"
                   style={{ 
                     width: '60px', 
@@ -121,7 +124,7 @@ function SeniorCare() {
             <div className="premium-service-card">
               <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                 <img 
-                  src="https://static.wixstatic.com/media/4ca325_d133582d0ea3407c8191309b430369d2~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cleaning.png"
+                  src={HouseHold}
                   alt="Household Care Icon"
                   style={{ width: '60px', height: '60px', objectFit: 'contain' }}
                 />
@@ -173,7 +176,7 @@ function SeniorCare() {
             <div className="premium-service-card">
               <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                 <img 
-                  src="https://static.wixstatic.com/media/4ca325_56f48e79113249af8ee313a8250b83ca~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/transport.png"
+                  src={CompanionCare}
                   alt="Companion Care Icon"
                   style={{ width: '60px', height: '60px', objectFit: 'contain' }}
                 />

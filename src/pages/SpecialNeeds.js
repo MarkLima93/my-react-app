@@ -1,4 +1,8 @@
 import React from 'react';
+import PersonalCare from '../images/personalCare.avif';
+import Engagement from '../images/Engagement.avif';
+import PhysicalSupport from '../images/PhysicalSupport.avif';
+import AlphabetCubes from '../images/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people (1).png';
 
 function SpecialNeeds() {
   const footerStyle = {
@@ -56,7 +60,7 @@ function SpecialNeeds() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://e7.pngegg.com/pngimages/229/392/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people.png"
+                  src={Engagement}
                   alt="Early Learning Icon"
                   style={{ 
                     width: '60px', 
@@ -126,7 +130,7 @@ function SpecialNeeds() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://static.wixstatic.com/media/4ca325_8ec4f90602644ac6ab02b9db337c7db7~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/meal%20prep.png"
+                  src={PhysicalSupport}
                   alt="Physical Support"
                   style={{ 
                     width: '60px', 
@@ -196,7 +200,7 @@ function SpecialNeeds() {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="https://static.wixstatic.com/media/4ca325_d080dd236d984a22a22d97c523837041~mv2.png/v1/fill/w_176,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/personal%20care.png"
+                  src={PersonalCare}
                   alt="Behavioral Support"
                   style={{ 
                     width: '60px', 

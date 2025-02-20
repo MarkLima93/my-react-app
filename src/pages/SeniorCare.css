@@ -8,8 +8,7 @@
   width: 100%;
   z-index: 1;
   padding: 6rem 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://abetterwayinhomecare.com/wp-content/uploads/2024/11/1fe62bf24d3590aaa6e8fd7c6f9843d9.jpg');
+  background-image: url('../images/SeniorCarePic.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,14 +16,14 @@
 
 .page-header-pro.child-care-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://cdn10.bostonmagazine.com/wp-content/uploads/sites/2/2021/08/daycare.jpg');
+              url('../images/ChildCarePic.avif');
   background-size: cover;
   background-position: center;
 }
 
 .page-header-pro.special-needs-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://www.borgenmagazine.com/wp-content/uploads/2014/08/special-needs-children-in-developing-countries_opt.jpg');
+              url('../images/SpecialNeedsPic.avif');
   background-size: cover;
   background-position: center;
 }
