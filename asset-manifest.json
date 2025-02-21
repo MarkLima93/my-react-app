@@ -1,15 +1,27 @@
 {
   "files": {
-    "main.css": "/my-react-app/static/css/main.6dcd50dc.css",
-    "main.js": "/my-react-app/static/js/main.00e5cd31.js",
+    "main.css": "/my-react-app/static/css/main.52ed8959.css",
+    "main.js": "/my-react-app/static/js/main.48c218b8.js",
     "static/js/488.af104311.chunk.js": "/my-react-app/static/js/488.af104311.chunk.js",
+    "static/media/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people (1).png": "/my-react-app/static/media/png-clipart-three-alphabet-cubes-child-care-pre-school-learning-class-abc-child-people (1).a7dc32ae43850304746f.png",
+    "static/media/SeniorCarePic.jpg": "/my-react-app/static/media/SeniorCarePic.88244828297e7ae3dea0.jpg",
+    "static/media/ChildCarePic.avif": "/my-react-app/static/media/ChildCarePic.c30bf82b14314e08297f.avif",
+    "static/media/SpecialNeedsPic.avif": "/my-react-app/static/media/SpecialNeedsPic.6a7e7c9d65b706203898.avif",
+    "static/media/PhysicalSupport.avif": "/my-react-app/static/media/PhysicalSupport.a61b4acbb812d949041f.avif",
+    "static/media/BalanceCenterLogo.jpg": "/my-react-app/static/media/BalanceCenterLogo.c9e558414fbf022530ef.jpg",
+    "static/media/CreativeActivties.jpg": "/my-react-app/static/media/CreativeActivties.2588896a97e9625f8ba9.jpg",
+    "static/media/Engagement.avif": "/my-react-app/static/media/Engagement.5be13d4b1b1d82d224dd.avif",
+    "static/media/BalanceCenterLogo.avif": "/my-react-app/static/media/BalanceCenterLogo.39b571feb975fb0f74f4.avif",
+    "static/media/houseHold.avif": "/my-react-app/static/media/houseHold.42d432371945cca04df9.avif",
+    "static/media/CompanionCare.avif": "/my-react-app/static/media/CompanionCare.0ab5d9d33eaf455e2484.avif",
+    "static/media/personalCare.avif": "/my-react-app/static/media/personalCare.635797280883729ea357.avif",
     "index.html": "/my-react-app/index.html",
-    "main.6dcd50dc.css.map": "/my-react-app/static/css/main.6dcd50dc.css.map",
-    "main.00e5cd31.js.map": "/my-react-app/static/js/main.00e5cd31.js.map",
+    "main.52ed8959.css.map": "/my-react-app/static/css/main.52ed8959.css.map",
+    "main.48c218b8.js.map": "/my-react-app/static/js/main.48c218b8.js.map",
     "488.af104311.chunk.js.map": "/my-react-app/static/js/488.af104311.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6dcd50dc.css",
-    "static/js/main.00e5cd31.js"
+    "static/css/main.52ed8959.css",
+    "static/js/main.48c218b8.js"
   ]
 }
