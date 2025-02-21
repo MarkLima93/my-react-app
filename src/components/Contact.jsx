@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="about-page" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="about-page" style={{ flexDirection: 'column' }}>
       <div className="page-header-pro" style={{
         background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80")',
         backgroundSize: 'cover',

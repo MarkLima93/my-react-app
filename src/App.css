@@ -79,7 +79,8 @@
 
 .service-cards {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 3rem;
   max-width: 1200px;
@@ -92,7 +93,6 @@
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -2325,5 +2325,113 @@
   .services-section ul li {
     margin-bottom: 0.8rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Mobile responsiveness for service cards */
+@media (max-width: 1024px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .service-card {
+    text-align: center;
+  }
+
+  .service-card-image {
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+  }
+
+  .service-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Contact page mobile-specific adjustments */
+@media (max-width: 768px) {
+  .about-page .content-container {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .about-page .contact-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    padding: 0;
+  }
+
+  .contact-info, 
+  .contact-alternative {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-info h3, 
+  .contact-alternative h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Match the page header style of other pages */
+  .about-page .page-header-pro {
+    min-height: 300px;
+    padding: 2rem 1rem;
+  }
+
+  /* Match the intro section style of other pages */
+  .about-page .intro-section {
+    margin-top: -50px;
+    padding: 0 1rem;
+  }
+
+  .about-page .intro-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 }

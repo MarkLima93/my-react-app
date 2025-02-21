@@ -149,6 +149,7 @@
 .contact-info {
   display: grid;
   gap: 30px;
+  padding-left: 1em;
 }
 
 .contact-item {
